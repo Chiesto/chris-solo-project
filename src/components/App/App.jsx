@@ -14,11 +14,13 @@ import Footer from '../Footer/Footer';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 import AboutPage from '../AboutPage/AboutPage';
-import UserPage from '../UserPage/UserPage';
+import FridgePage from '../FridgePage/FridgePage';
 import AddPage from '../AddPage/AddPage';
 import LandingPage from '../LandingPage/LandingPage';
+import RecipePage from '../RecipePage/RecipePage';
 
 import './App.css';
+import EditPage from '../EditPage/EditPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -55,15 +57,28 @@ function App() {
             exact
             path="/fridge"
           >
-            <UserPage />
+            <FridgePage />
           </ProtectedRoute>
 
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
-            path="/info"
+            path="/add"
           >
             <AddPage />
+          </ProtectedRoute>
+          <ProtectedRoute
+            exact
+            path="/recipes"
+          >
+            <RecipePage/>
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            exact
+            path = '/edit/:id'
+          >
+            <EditPage/>
           </ProtectedRoute>
 
 

@@ -62,7 +62,7 @@ function UserPage() {
           </thead>
         </table>
       </div>
-      <button onClick={()=>history.push('/add')}>Add to your table</button>
+      <button onClick={()=>history.push('/add')}>Add to your fridge</button>
       <button onClick={()=>history.push('/recipes')}>Find Recipes</button>
 
     </div>

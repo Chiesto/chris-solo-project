@@ -1,15 +1,17 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
-// This is one of our simplest components
-// It doesn't have local state
-// It doesn't dispatch any redux actions or display any part of redux state
-// or even care what the redux state is
 
-function AddPage() {
-  const history = useHistory();
-  return (
-    <div className="container">
+function EditPage(){
+    const dispatch = useDispatch();
+    const idToDelete = useParams();
+
+    const deleteIngredient = ()=>{
+        dispatch({type: 'DELETE_ITEM', payload:idToDelete});
+    }
+
+    return(
+        <div className="container">
       <h1>Add to your fridge!</h1>
       <div>
         <form>
@@ -24,12 +26,12 @@ function AddPage() {
           <br />
           <label htmlFor='expiration'>Expiration:</label>
           <input name='expiration' type="text" placeholder='Expiration'/>
-          <button type='submit'>Add Ingredient +</button>
+          <button type='submit'>Accept Changes</button>
+          <button onClick={deleteIngredient}>Delete Ingredient</button>
         </form>
       </div>
       <button onClick={()=>history.push('/fridge')}>Back to your fridge</button>
     </div>
-  );
+    )
 }
-
-export default AddPage;
+export default EditPage;
