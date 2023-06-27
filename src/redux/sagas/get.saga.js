@@ -7,7 +7,7 @@ function* getFridge(){
         const fridge = yield axios.get(`/fridge`);
         yield put({type:'SET_FRIDGE', payload: fridge});
     } catch(error){
-        console.log('problem GETting', error);
+        console.log('problem GETting in saga', error);
     }
 }
 
