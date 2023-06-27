@@ -3,7 +3,7 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 router.delete('/delete/:id', (req, res)=>{
-    
+    const queryText = `DELETE FROM fridge WHERE id=$1;`;
 
     pool.query(queryText, [req.params])
         .then(response=>{
@@ -14,3 +14,4 @@ router.delete('/delete/:id', (req, res)=>{
         })
 })
 module.exports = router;
+
