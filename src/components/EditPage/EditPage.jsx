@@ -1,13 +1,15 @@
 import { useDispatch } from "react-redux";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory, useParams } from "react-router-dom";
 
 
 function EditPage(){
     const dispatch = useDispatch();
     const idToDelete = useParams();
+    const history = useHistory();
 
     const deleteIngredient = ()=>{
-        dispatch({type: 'DELETE_ITEM', payload:idToDelete});
+      dispatch({type: 'DELETE_ITEM', payload:idToDelete});
+      history.push('/fridge');
     }
 
     return(
@@ -27,8 +29,9 @@ function EditPage(){
           <label htmlFor='expiration'>Expiration:</label>
           <input name='expiration' type="text" placeholder='Expiration'/>
           <button type='submit'>Accept Changes</button>
-          <button onClick={deleteIngredient}>Delete Ingredient</button>
+          
         </form>
+        <button onClick={deleteIngredient}>Delete Ingredient</button>
       </div>
       <button onClick={()=>history.push('/fridge')}>Back to your fridge</button>
     </div>
