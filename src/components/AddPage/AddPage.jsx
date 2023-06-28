@@ -41,7 +41,7 @@ function AddPage() {
           onChange={(event)=>setIngredientName(event.target.value)}/>
           <br/>
           <label htmlFor='foodGroup'>Food Group:</label> 
-          <select name='foodGroup' onChange={(event)=>setFoodGroup(event.target.value)}>
+          <select required name='foodGroup' onChange={(event)=>setFoodGroup(event.target.value)}>
             <option value={1}>Protein</option>
             <option value={2}>Vegetable</option>
             <option value={3}>Grain</option>

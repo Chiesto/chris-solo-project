@@ -5,6 +5,7 @@ function* postItem(action){
     try{ 
         console.log('this item is being posted', action.payload);
         yield axios.post(`/fridge`, action.payload);
+        yield put('GET_FRIDGE');
     } catch(error){
         console.log('problem POSTing in saga', error);
     }
