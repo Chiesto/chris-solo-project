@@ -17,11 +17,11 @@ router.delete('/delete/:id', (req, res)=>{
         })
 });
 
-//GET request to obtain 
+//GET request to obtain the fridge for the user currently logged in
 router.get('/', (req, res)=>{
-    const queryText = `SELECT * FROM fridge;`;
+    const queryText = `SELECT * FROM fridge WHERE user_id = $1;`;
     
-    pool.query(queryText)
+    pool.query(queryText, [req.user.id])
         .then(response=>{
             //checking to see how the data is coming back from the DB
             console.log(response.rows);
@@ -37,6 +37,7 @@ router.post('/', (req, res)=>{
     INSERT INTO fridge (ingredient_name, food_group_id, amount, expiration, user_id)
     VALUES ($1, $2, $3, $4, $5);`;
     const values = [req.body.ingredient_name, req.body.food_group_id, req.body.amount, req.body.expiration, req.user.id];
+    console.log('REQ.BODYYYYYYYY => ',req.body);
     pool.query(queryText, values)
         .then(response=>{
             res.sendStatus(201);

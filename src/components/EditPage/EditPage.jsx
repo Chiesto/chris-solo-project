@@ -14,20 +14,27 @@ function EditPage(){
 
     return(
         <div className="container">
-      <h1>Add to your fridge!</h1>
+      <h1>Change fridge item</h1> {/*change "fridge item" */}
       <div>
         <form>
           <label htmlFor='ingredientName'>Ingredient Name:</label>
           <input required name='ingredientName' type="text" placeholder='Ingredient Name'/>
           <br/>
-          <label htmlFor='foodGroup'>Food Group:</label> {/*input a dropdown menu <select><option></option></select>*/}
-          <input required name='foodGroup' type='text' placeholder='Food Group'/>
+          <label htmlFor='foodGroup'>Food Group:</label> 
+          <select name='foodGroup' onChange={(event)=>setFoodGroup(event.target.value)}>
+            <option value={1}>Protein</option>
+            <option value={2}>Vegetable</option>
+            <option value={3}>Grain</option>
+            <option value={4}>Fruit</option>
+            <option value={5}>Dairy</option>
+            <option value={6}>Other</option>
+          </select>
           <br />
           <label htmlFor='amount'>Amount:</label>
-          <input name='amount' type="text" placeholder='Amount'/>
+          <input required name='amount' type="text" placeholder='Amount'/>
           <br />
           <label htmlFor='expiration'>Expiration:</label>
-          <input name='expiration' type="text" placeholder='Expiration'/>
+          <input required name='expiration' type="text" placeholder='Expiration'/>
           <button type='submit'>Accept Changes</button>
           
         </form>

@@ -32,7 +32,7 @@ function UserPage() {
                 ))}
             </tr>
             <tr>
-              <th>Vegitable</th>
+              <th>Vegetable</th>
               {fridge && fridge.map(item=> (
                 item.food_group_id===2 && <td key={item.id}>|{item.ingredient_name} AMOUNT: {item.amount} EXP:{item.expiration} - <button onClick={()=>editBtn(item.id)}>Edit</button>|</td>
                 ))}
