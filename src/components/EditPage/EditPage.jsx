@@ -41,6 +41,7 @@ function EditPage(){
 
 
       }});
+      history.push('/fridge');
     }
     console.log('should be the day:',item);
     useEffect(()=>{
@@ -67,7 +68,7 @@ function EditPage(){
           </select>
           <br />
           <label htmlFor='amount'>Amount:</label>
-          <input required onChange={(event)=>setAmount(event.target.value)}value={amount} name='amount' type="text" placeholder='Amount'/>
+          <input required onChange={(event)=>setAmount(event.target.value)}value={Number(amount)} name='amount' type="number" placeholder='Amount'/>
           <br />
           <label htmlFor='expiration'>Expiration:</label>
           <input required onChange={(event)=>setExpiration(event.target.value)} value={expiration} name='expiration' type="date" />

@@ -1,7 +1,14 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 function RecipePage(){
     const history = useHistory();
+    const dispatch = useDispatch();
+
+    useEffect(()=>{
+        dispatch({type: 'GET_RECIPE_LIST'});
+    }, [])
 
     return(
         <>
