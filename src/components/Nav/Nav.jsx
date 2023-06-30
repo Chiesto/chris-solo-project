@@ -12,7 +12,7 @@ function Nav() {
   return (
     <div className="nav">
       <Link to="/home">
-        <h2 className="nav-title">Prime Solo Project</h2>
+        <h2 className="nav-title">Pantry Pal!</h2>
       </Link>
       <div>
         {/* If the user is on the about page, show these links */}
@@ -38,16 +38,17 @@ function Nav() {
           )):(// else user is NOT on the about page, show these links
             <>
               {user.id?(
-                // user is not on about page but logged in
+                // user IS logged in
                 
                 <LogOutButton className="navLink" />
                   ):(
-                    
+                    //user is NOT logged in
                 <Link className="navLink" to="/home">
                   Login / Register
                 </Link>
                 )}
-              
+              {/* user is NOT on about page always show About link. Doesn't matter 
+              if user's logged in or not */}
               <Link className="navLink" to="/about">
                 About
               </Link>

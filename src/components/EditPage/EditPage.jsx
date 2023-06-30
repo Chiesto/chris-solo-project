@@ -30,6 +30,7 @@ function EditPage(){
       dispatch({type: 'DELETE_ITEM', payload:itemID});
       history.push('/fridge');
     }
+    //allows the user to update any or all of the item categories
     const updateIngredient = (event)=>{
       event.preventDefault();
       dispatch({type: 'PUT_ITEM', payload: {
@@ -43,14 +44,18 @@ function EditPage(){
       }});
       history.push('/fridge');
     }
-    console.log('should be the day:',item);
+
     useEffect(()=>{
       dispatch({type: 'GET_FRIDGE'});
     }, []);
 
     return(
-        <div className="container">
-      <h1>Change fridge item</h1> {/*change "fridge item" to the actual item being edited*/}
+    <div className="container">
+      {item?(
+        <h1>Change {item.ingredient_name}</h1>
+      ):(
+        <h1>Change fridge item</h1>
+      )}
       <div>
         <form onSubmit={updateIngredient}>
           <label htmlFor='ingredientName'>Ingredient Name:</label>

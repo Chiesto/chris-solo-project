@@ -6,6 +6,8 @@ import deleteSaga from './deleteSaga';
 import getSaga from './get.saga';
 import postSaga from './post.saga';
 import putSaga from './put.saga';
+import getRecipesSaga from './api.saga';
+import getOneRecipeSaga from './oneRecipe.saga';
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -23,5 +25,8 @@ export default function* rootSaga() {
     getSaga(),
     postSaga(),
     putSaga(),
+    getRecipesSaga(),
+    getOneRecipeSaga(),
+
   ]);
 }

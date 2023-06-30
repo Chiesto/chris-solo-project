@@ -21,6 +21,7 @@ import RecipePage from '../RecipePage/RecipePage';
 
 import './App.css';
 import EditPage from '../EditPage/EditPage';
+import IndividualRecipe from '../IndividualRecipe/IndividualRecipe';
 
 function App() {
   const dispatch = useDispatch();
@@ -37,7 +38,9 @@ function App() {
         <Nav />
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
+
           <Redirect exact from="/" to="/home" />
+          {user.id&&<Redirect exact from="/home" to="/fridge" />}
 
           {/* Visiting localhost:3000/about will show the about page. */}
           <Route
@@ -79,6 +82,13 @@ function App() {
             path = '/edit/:id'
           >
             <EditPage/>
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            exact
+            path = '/recipe/:id'
+          >
+            <IndividualRecipe />
           </ProtectedRoute>
 
 
