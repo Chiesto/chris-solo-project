@@ -1,14 +1,22 @@
 import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 function RecipeItem({item}){
     //imports
     const history = useHistory();
+    const dispatch = useDispatch();
 
-    
+    //function to get the recipe then send user to the page that displays that information.
+    const handleOneRecipe = (id) =>{
+        dispatch({type: 'GET_ONE_RECIPE', payload: id});
+        history.push(`/oneRecipe/${id}`)
+    }
+
+
     return(
         <>
             <li>{item.title}</li>
-            <img onClick={()=>history.push(`/recipe/${item.id}`)}src={item.image}/>
+            <img onClick={()=>handleOneRecipe(item.id)} src={item.image}/>
         </>
     )
 }

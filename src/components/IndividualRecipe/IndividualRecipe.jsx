@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, useHistory, Link } from "react-router-dom";
 
 function IndividualRecipe(){
     //imports
@@ -10,15 +10,18 @@ function IndividualRecipe(){
     const recipe = useSelector(store=>store.oneRecipe);
 
 
-    console.log('Recipe ID being sent', Number(recipeId.id));
+    // console.log('Recipe ID being sent', Number(recipeId.id));
 
-    useEffect(()=>{
-        dispatch({type: 'GET_ONE_RECIPE', payload: Number(recipeId.id)})
-    }, [])
+    // useEffect(()=>{
+    //     dispatch({type: 'GET_ONE_RECIPE', payload: Number(recipeId.id)})
+    // }, [])
     return(
         <div>
-
-            <button onClick={history.push('/recipes')}>Back to recipe list</button>
+            <h3>{recipe?.title}</h3>
+            <img src={recipe?.image}/>
+            <p>Ready in {recipe?.readyInMinutes} minutes! Makes {recipe?.servings} servings.</p>
+            <Link to={{pathname: recipe?.sourceUrl}} target='_blank'>Go to full recipe details</Link>
+            <button onClick={()=>history.push('/recipes')}>Back to recipe list</button>
         </div>
     )
 }

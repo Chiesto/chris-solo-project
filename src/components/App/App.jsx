@@ -40,6 +40,7 @@ function App() {
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
 
           <Redirect exact from="/" to="/home" />
+          {/* if the user is logged in, redirect to the fridge page */}
           {user.id&&<Redirect exact from="/home" to="/fridge" />}
 
           {/* Visiting localhost:3000/about will show the about page. */}
@@ -86,7 +87,7 @@ function App() {
 
           <ProtectedRoute
             exact
-            path = '/recipe/:id'
+            path = '/oneRecipe/:id'
           >
             <IndividualRecipe />
           </ProtectedRoute>

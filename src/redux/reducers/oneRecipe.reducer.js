@@ -1,4 +1,4 @@
-const oneRecipeReducer = (state = {}, action) => {
+const oneRecipeReducer = (state = [], action) => {
     switch (action.type) {
       case 'SET_ONE_RECIPE':
         return action.payload;
