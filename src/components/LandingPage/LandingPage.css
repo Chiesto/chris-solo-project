@@ -78,3 +78,16 @@ Grid
   flex-basis: 100%;
   max-width: 100%;
 }
+
+#description{
+  width: 450px;
+  margin-right: 0px;
+  background-color: lightgray;
+}
+#landingPic{
+  width: 300px;
+}
+.landingContainer{
+  background-color: black;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa2ldt9G7jiCM_Rs0ESiWIpdptGVPk5E7_Lg&usqp=CAU);
+}

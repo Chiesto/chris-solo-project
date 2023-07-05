@@ -1,0 +1,29 @@
+.addPageContainer{
+    overflow:hidden;
+    background-image: url(https://media.istockphoto.com/id/1071414426/photo/wooden-tabletop-over-defocused-kitchen-background.jpg?s=612x612&w=0&k=20&c=Ml9hyox3LoPw9KZsx-12OdZv-nkCsBwxu9fpGmS-V5c=);
+}
+
+#back_to_fridge{
+    float: left;
+    margin-top:20px;
+    height: 70px;
+    width: 130px;
+    font-size: 20px;
+    color: white;
+    background-color: navy;
+}
+#addPageFormContainer{
+    border:1px solid black;
+    width: 500px;
+    padding: 10px;
+    margin-left: 10%;
+    text-align: center;
+    background-color: burlywood;
+}
+#addIngredientBtn{
+    background-color: lightcoral;
+    color: white;
+    float:right;
+    height: 40px;
+    border-radius: 20%;
+}

@@ -1,0 +1,66 @@
+#fridgeTable th{
+    border: 1px solid black;
+    padding: 10px;
+}
+#fridgeTable td{
+    border: 1px solid black;
+}
+#fridgeTable{
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-right: 0;
+}
+.fridgeContainer{
+    overflow:hidden;
+    background-image: url(https://media.istockphoto.com/id/1071414426/photo/wooden-tabletop-over-defocused-kitchen-background.jpg?s=612x612&w=0&k=20&c=Ml9hyox3LoPw9KZsx-12OdZv-nkCsBwxu9fpGmS-V5c=);
+}
+.tableContainer{
+    float:left;
+    width: 70%;
+}
+.fridgeBtn{
+    float: right;
+    margin:0;
+    height: 70px;
+    width: 130px;
+    font-size: 20px;
+    color: white;
+    background-color: navy;
+}
+.fridgeBtn:hover{
+    background-color: blue;
+}
+#protein{
+    background-color: lightyellow;
+}
+.proteinTd:hover{
+    background-color: yellow;
+}
+#vegetable{
+    background-color: lightgreen;
+}
+.vegetableTd:hover{
+    background-color: green;
+}
+#grain{
+    background-color: lightblue;
+}
+.grainTd:hover{
+    background-color: blue;
+}
+#fruit{
+    background-color: lightcoral;
+}
+.fruitTd:hover{
+    background-color: red;
+}
+#dairy{
+    background-color: bisque;
+}
+.dairyTd:hover{
+    background-color: rgb(184, 101, 0);
+}
+#fridgeText{
+    margin: 0;
+    font-size: 15px;
+}

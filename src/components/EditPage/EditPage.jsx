@@ -50,7 +50,8 @@ function EditPage(){
     }, []);
 
     return(
-    <div className="container">
+    <div className="addPageContainer">
+      
       {item?(
         <h1>Change {item.ingredient_name}</h1>
       ):(

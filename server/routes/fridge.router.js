@@ -38,6 +38,7 @@ router.post('/', (req, res)=>{
     INSERT INTO fridge (ingredient_name, food_group_id, amount, expiration, user_id)
     VALUES ($1, $2, $3, $4, $5);`;
     const values = [req.body.ingredient_name, req.body.food_group_id, req.body.amount, req.body.expiration, req.user.id];
+    //checking the req.body to make sure it is what I expected it to be 
     console.log('REQ.BODYYYYYYYY => ',req.body);
     pool.query(queryText, values)
         .then(response=>{

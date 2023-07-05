@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import './AddPage.css';
 
 //This page handles the adding of a new item to the user's fridge
 
@@ -28,9 +29,10 @@ function AddPage() {
   }
 
   return (
-    <div className="container">
+    <div className="addPageContainer">
+      
+      <div id='addPageFormContainer'>
       <h1>Add to your fridge!</h1>
-      <div>
         <form onSubmit={handleAdd}>
           <label htmlFor='ingredientName'>Ingredient Name:</label>
           <input 
@@ -65,10 +67,10 @@ function AddPage() {
           type="date" 
           placeholder='Expiration'
           onChange={(event)=>setExpiration(event.target.value)}/>
-          <button type='submit'>Add Ingredient +</button>
+          <button id='addIngredientBtn' type='submit'>Add Ingredient +</button>
         </form>
       </div>
-      <button type='button' onClick={()=>history.push('/fridge')}>Back to your fridge</button>
+      <button id='back_to_fridge' type='button' onClick={()=>history.push('/fridge')}>Back to your fridge</button>
     </div>
   );
 }
