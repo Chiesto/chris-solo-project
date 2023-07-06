@@ -1,0 +1,40 @@
+
+#editPageFormDiv{
+    border:1px solid black;
+    border-radius: 40px;
+    width: 500px;
+    padding: 10px;
+    margin-left: 20%;
+    margin-top: 5%;
+    /* text-align: center; */
+    background-color: burlywood;
+}
+#editPageFormDiv h1{
+    margin-left: 10%;
+}
+.editPageBtn{
+    float: right;
+    height: 40px;
+    background-color: lightcoral;
+    position: relative;
+    top: -44px;
+    color: white;
+    border-radius: 10px;
+}
+.editPageBtn:hover{
+    background-color: red;
+}
+/* #editBkToFridge{
+    position: relative;
+    top: -100px;
+} */
+
+/* .addPageContainer #back_to_fridge{
+    margin-bottom: 50px;
+} */
+#editForm input{
+    width: 130px;
+}
+#editForm select{
+    width: 130px;
+}

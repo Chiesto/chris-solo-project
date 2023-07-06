@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import './EditPage.css'
 
 
 function EditPage(){
@@ -51,39 +52,42 @@ function EditPage(){
 
     return(
     <div className="addPageContainer">
-      
-      {item?(
-        <h1>Change {item.ingredient_name}</h1>
-      ):(
-        <h1>Change fridge item</h1>
-      )}
-      <div>
-        <form onSubmit={updateIngredient}>
-          <label htmlFor='ingredientName'>Ingredient Name:</label>
-          <input required onChange={(event)=>setIngredientName(event.target.value)} value={ingredientName} name='ingredientName' type="text" placeholder='Ingredient Name'/>
-          <br/>
-          <label htmlFor='foodGroup'>Food Group:</label> 
-          <select required value={foodGroup} name='foodGroup' onChange={(event)=>setFoodGroup(event.target.value)}>
-            <option>Select</option>
-            <option value={1}>Protein</option>
-            <option value={2}>Vegetable</option>
-            <option value={3}>Grain</option>
-            <option value={4}>Fruit</option>
-            <option value={5}>Dairy</option>
-            <option value={6}>Other</option>
-          </select>
-          <br />
-          <label htmlFor='amount'>Amount:</label>
-          <input required onChange={(event)=>setAmount(event.target.value)}value={Number(amount)} name='amount' type="number" placeholder='Amount'/>
-          <br />
-          <label htmlFor='expiration'>Expiration:</label>
-          <input required onChange={(event)=>setExpiration(event.target.value)} value={expiration} name='expiration' type="date" />
-          <button type='submit'>Accept Changes</button>
+      <div id="editPageFormDiv">
+        {item?(
+          <h1>Change {item.ingredient_name}</h1>
+        ):(
+          <h1>Change fridge item</h1>
+        )}
+        <div id='editForm' >
+          <form onSubmit={updateIngredient}>
+            <label htmlFor='ingredientName'>Ingredient Name:</label>
+            <input required onChange={(event)=>setIngredientName(event.target.value)} value={ingredientName} name='ingredientName' type="text" placeholder='Ingredient Name'/>
+            <br/>
+            <label htmlFor='foodGroup'>Food Group:</label> 
+            <select required value={foodGroup} name='foodGroup' onChange={(event)=>setFoodGroup(event.target.value)}>
+              <option>Select</option>
+              <option value={1}>Protein</option>
+              <option value={2}>Vegetable</option>
+              <option value={3}>Grain</option>
+              <option value={4}>Fruit</option>
+              <option value={5}>Dairy</option>
+              <option value={6}>Other</option>
+            </select>
+            <br />
+            <label htmlFor='amount'>Amount:</label>
+            <input required onChange={(event)=>setAmount(event.target.value)}value={Number(amount)} name='amount' type="number" placeholder='Amount'/>
+            <br />
+            <label htmlFor='expiration'>Expiration:</label>
+            <input required onChange={(event)=>setExpiration(event.target.value)} value={expiration} name='expiration' type="date" />
+            <button className="editPageBtn" type='submit'>Accept Changes</button> <br/><br/>
+            <button className="editPageBtn" onClick={deleteIngredient}>Delete Ingredient</button>
+            
+          </form>
           
-        </form>
-        <button onClick={deleteIngredient}>Delete Ingredient</button>
+        </div>
       </div>
-      <button type='button' onClick={()=>history.push('/fridge')}>Back to your fridge</button>
+      <button className='back_to_fridge' id="editBkToFridge" type='button' onClick={()=>history.push('/fridge')}>Back to your fridge</button>
+
     </div>
     )
 }

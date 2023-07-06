@@ -7,9 +7,12 @@ import RegisterForm from '../RegisterForm/RegisterForm';
 import LoginForm from '../LoginForm/LoginForm';
 
 function LandingPage() {
+  //state variable 
   const [heading, setHeading] = useState('Welcome');
   const [registered, setRegistered] = useState(false);
   const history = useHistory();
+
+
 
   const onLogin = (event) => {
     setRegistered(!registered);
@@ -17,7 +20,7 @@ function LandingPage() {
 
   return (
     <div className="landingContainer">
-      <h2>{heading}</h2>
+      <h2 id='heading'>{heading}</h2>
 
       <div className="grid">
         <div className="grid-col grid-col_8">

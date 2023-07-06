@@ -1,5 +1,10 @@
 footer {
-  margin-top: 80px;
+  margin-top: 215px;
   padding: 20px;
-  text-align: center;
+  text-align: center; 
+  background-size:cover;
+}
+#react-root{
+background-image: url('../../pictures/kitchenLarge.jpeg');
+background-size:cover;
 }

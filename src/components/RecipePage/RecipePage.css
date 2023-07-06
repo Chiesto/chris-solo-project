@@ -1,0 +1,47 @@
+#scroll {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin:4px 4px;
+    padding:4px;
+    margin-left: 5%;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 80%;
+    height: 300px;
+    overflow-x:auto;
+    overflow-y: auto;
+    text-align:justify;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.recipeDiv{
+    box-sizing: border-box;
+    padding-right: 0;
+    width: 30%;
+    text-align: center;
+}
+
+.recipeDiv img{
+    /* display: grid; */
+    border: 5px outset grey;
+    border-radius: 10px;
+    display: block;
+    width: 311px;
+    flex: 0 0 auto;
+    cursor: pointer;
+    
+    
+
+}
+.recipeDiv img:hover{
+    border: 3px inset;
+}
+.recipeDiv p{
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#bckToFridge{
+    margin-top: 5%;
+}

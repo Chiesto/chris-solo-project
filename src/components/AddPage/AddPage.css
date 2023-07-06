@@ -1,29 +1,56 @@
 .addPageContainer{
     overflow:hidden;
-    background-image: url(https://media.istockphoto.com/id/1071414426/photo/wooden-tabletop-over-defocused-kitchen-background.jpg?s=612x612&w=0&k=20&c=Ml9hyox3LoPw9KZsx-12OdZv-nkCsBwxu9fpGmS-V5c=);
+    /* background-image: url(https://media.istockphoto.com/id/1071414426/photo/wooden-tabletop-over-defocused-kitchen-background.jpg?s=612x612&w=0&k=20&c=Ml9hyox3LoPw9KZsx-12OdZv-nkCsBwxu9fpGmS-V5c=); */
+    /* background-image: url(https://t4.ftcdn.net/jpg/05/78/62/91/360_F_578629176_D44SAyxlIfrEN9CL66zciLgsUiAYA37k.jpg); */
+    /* background-image: url('../../pictures/kitchenLarge.jpeg'); */
+
+    background-size: cover;
+    height:550px;
 }
 
-#back_to_fridge{
+.back_to_fridge{
     float: left;
-    margin-top:20px;
+    margin-top:10%;
     height: 70px;
     width: 130px;
     font-size: 20px;
     color: white;
     background-color: navy;
+    border-radius: 10px;
+
+}
+.back_to_fridge:hover{
+    background-color: blue;
 }
 #addPageFormContainer{
     border:1px solid black;
     width: 500px;
     padding: 10px;
-    margin-left: 10%;
-    text-align: center;
+    margin-left: 20%;
+    /* text-align: center; */
     background-color: burlywood;
+    margin-top: 5%;
+    border-radius: 30px;
+}
+#addPageFormContainer h1{
+    margin-left: 8%;
+}
+#addPageFormContainer input{
+    width: 130px;
+}
+#addPageFormContainer select{
+    width: 130px;
 }
 #addIngredientBtn{
     background-color: lightcoral;
     color: white;
     float:right;
     height: 40px;
-    border-radius: 20%;
+    border-radius: 10px;
+    position: relative;
+    top: -10px;
+    left: -10px
+}
+#addIngredientBtn:hover{
+    background-color: red;
 }

@@ -14,10 +14,11 @@ function RecipeItem({item}){
 
 
     return(
-        <>
-            <li>{item.title}</li>
+        <div className="recipeDiv" style={{marginRight: '0px'}}>
+            
             <img onClick={()=>handleOneRecipe(item.id)} src={item.image}/>
-        </>
+            <p>{item.title}</p>
+        </div>
     )
 }
 

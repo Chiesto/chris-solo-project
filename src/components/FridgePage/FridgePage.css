@@ -1,3 +1,7 @@
+#yourFridge{
+    margin-left: 20%;
+}
+
 #fridgeTable th{
     border: 1px solid black;
     padding: 10px;
@@ -9,10 +13,12 @@
     border: 1px solid black;
     border-collapse: collapse;
     margin-right: 0;
+    margin-left: 10%;
 }
 .fridgeContainer{
     overflow:hidden;
-    background-image: url(https://media.istockphoto.com/id/1071414426/photo/wooden-tabletop-over-defocused-kitchen-background.jpg?s=612x612&w=0&k=20&c=Ml9hyox3LoPw9KZsx-12OdZv-nkCsBwxu9fpGmS-V5c=);
+    /* background-image: url(https://thumbs.dreamstime.com/b/wood-table-top-blur-kitchen-room-background-montage-product-display-design-key-visual-layout-cooking-concept-99523227.jpg); */
+    height:max-content;
 }
 .tableContainer{
     float:left;
@@ -20,12 +26,13 @@
 }
 .fridgeBtn{
     float: right;
-    margin:0;
+    margin-right:20px;
     height: 70px;
     width: 130px;
     font-size: 20px;
     color: white;
     background-color: navy;
+    border-radius: 10px;
 }
 .fridgeBtn:hover{
     background-color: blue;
@@ -47,12 +54,14 @@
 }
 .grainTd:hover{
     background-color: blue;
+    color: white;
 }
 #fruit{
     background-color: lightcoral;
 }
 .fruitTd:hover{
     background-color: red;
+    color: white;
 }
 #dairy{
     background-color: bisque;
@@ -60,7 +69,18 @@
 .dairyTd:hover{
     background-color: rgb(184, 101, 0);
 }
+#other{
+    background-color: aliceblue;
+}
+.otherTd:hover{
+    background-color: rgba(240, 248, 255, 0);
+}
 #fridgeText{
     margin: 0;
+    margin-bottom: 50px;
+    margin-left: 12%;
     font-size: 15px;
+    color: white;
+    background-color: black;
+    width: 300px;
 }

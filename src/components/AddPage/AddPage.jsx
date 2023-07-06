@@ -42,8 +42,9 @@ function AddPage() {
           placeholder='Ingredient Name'
           onChange={(event)=>setIngredientName(event.target.value)}/>
           <br/>
-          <label htmlFor='foodGroup'>Food Group:</label> 
+          <label htmlFor='foodGroup'>Food Group: </label> 
           <select required name='foodGroup' onChange={(event)=>setFoodGroup(event.target.value)}>
+            <option selected disabled hidden>Select a food group</option>
             <option value={1}>Protein</option>
             <option value={2}>Vegetable</option>
             <option value={3}>Grain</option>
@@ -70,7 +71,7 @@ function AddPage() {
           <button id='addIngredientBtn' type='submit'>Add Ingredient +</button>
         </form>
       </div>
-      <button id='back_to_fridge' type='button' onClick={()=>history.push('/fridge')}>Back to your fridge</button>
+      <button className='back_to_fridge' type='button' onClick={()=>history.push('/fridge')}>Back to your fridge</button>
     </div>
   );
 }

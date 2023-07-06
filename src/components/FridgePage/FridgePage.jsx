@@ -25,44 +25,44 @@ function UserPage() {
 
   return (
     <div className="fridgeContainer">
-      <h1>Your Fridge!</h1>
+      <h1 id='yourFridge'>Your Fridge!</h1>
       <div className='tableContainer'>
         <table id='fridgeTable'>
           <thead>
             <tr id='protein'>
               <th >Protein</th>
               {fridge && fridge.map(item=> (
-                item.food_group_id===1 && <td className='proteinTd' onClick={()=>editBtn(item.id)} key={item.id}><b>{item.ingredient_name}</b> Amount: {item.amount} EXP:{formatDate(item)}</td>
+                item.food_group_id===1 && <td className='proteinTd' onClick={()=>editBtn(item.id)} key={item.id}><b>{item.ingredient_name}</b> <br/>Amount: {item.amount} <br/>Expires: {formatDate(item)}</td>
                 ))}
             </tr>
             <tr id='vegetable'>
               <th>Vegetable</th>
               {fridge && fridge.map(item=> (
-                item.food_group_id===2 && <td className='vegetableTd' onClick={()=>editBtn(item.id)} key={item.id}><b>{item.ingredient_name}</b> Amount: {item.amount} EXP:{formatDate(item)}</td>
+                item.food_group_id===2 && <td className='vegetableTd' onClick={()=>editBtn(item.id)} key={item.id}><b>{item.ingredient_name}</b> <br/>Amount: {item.amount} <br/>Expires: {formatDate(item)}</td>
                 ))}
             </tr>
             <tr id='grain'>
               <th>Grain</th>
               {fridge && fridge.map(item=> (
-                item.food_group_id===3 && <td className='grainTd' onClick={()=>editBtn(item.id)} key={item.id}><b>{item.ingredient_name}</b> Amount: {item.amount} EXP:{formatDate(item)}</td>
+                item.food_group_id===3 && <td className='grainTd' onClick={()=>editBtn(item.id)} key={item.id}><b>{item.ingredient_name}</b> <br/>Amount: {item.amount} <br/>Expires: {formatDate(item)}</td>
                 ))}
             </tr>
             <tr id='fruit'>
               <th>Fruit</th>
               {fridge && fridge.map(item=> (
-                item.food_group_id===4 && <td className='fruitTd' onClick={()=>editBtn(item.id)} key={item.id}><b>{item.ingredient_name}</b> Amount: {item.amount} EXP:{formatDate(item)}</td>
+                item.food_group_id===4 && <td className='fruitTd' onClick={()=>editBtn(item.id)} key={item.id}><b>{item.ingredient_name}</b> <br/>Amount: {item.amount} <br/>Expires: {formatDate(item)}</td>
                 ))}
             </tr>
             <tr id='dairy'>
               <th>Dairy</th>
               {fridge && fridge.map(item=> (
-                item.food_group_id===5 && <td className='dairyTd' onClick={()=>editBtn(item.id)} key={item.id}><b>{item.ingredient_name}</b> Amount: {item.amount} EXP:{formatDate(item)}</td>
+                item.food_group_id===5 && <td className='dairyTd' onClick={()=>editBtn(item.id)} key={item.id}><b>{item.ingredient_name}</b> <br/>Amount: {item.amount} <br/>Expires: {formatDate(item)}</td>
                 ))}
             </tr>
-            <tr>
+            <tr id='other'>
               <th>Other</th>
               {fridge && fridge.map(item=> (
-                item.food_group_id===6 && <td key={item.id}><b>{item.ingredient_name}</b> Amount: {item.amount} EXP:{formatDate(item)} - <button onClick={()=>editBtn(item.id)}>Edit</button></td>
+                item.food_group_id===6 && <td className='otherTd' onClick={()=>editBtn(item.id)} key={item.id}><b>{item.ingredient_name}</b> <br/>Amount: {item.amount} <br/>Expires: {formatDate(item)}</td>
                 ))}
             </tr>
           </thead>

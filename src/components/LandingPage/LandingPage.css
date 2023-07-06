@@ -90,4 +90,17 @@ Grid
 .landingContainer{
   background-color: black;
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa2ldt9G7jiCM_Rs0ESiWIpdptGVPk5E7_Lg&usqp=CAU);
+  
 }
+#description{
+  margin-left: 10%;
+  padding: 10px;
+  background-color: white;
+}
+#heading{
+  width: 110px;
+  padding: 10px;
+  margin-left: 18%;
+  background-color: white;
+}
+
