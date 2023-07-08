@@ -26,7 +26,8 @@
 }
 .fridgeBtn{
     float: right;
-    margin-right:20px;
+    margin-left: 0;
+    margin-right: 10%;
     height: 70px;
     width: 130px;
     font-size: 20px;
@@ -54,14 +55,14 @@
 }
 .grainTd:hover{
     background-color: blue;
-    color: white;
+   
 }
 #fruit{
     background-color: lightcoral;
 }
 .fruitTd:hover{
     background-color: red;
-    color: white;
+   
 }
 #dairy{
     background-color: bisque;

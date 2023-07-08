@@ -35,7 +35,7 @@ function LandingPage() {
 
         </div>
 
-        <div className="grid-col grid-col_4">
+        <div className="grid-col grid-col_3">
         {!registered ? (
           <RegisterForm />
         ):(

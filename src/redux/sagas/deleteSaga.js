@@ -8,7 +8,7 @@ function* deleteItem(action){
         //send a delete request to my DB with the ID of the item they clicked on.
         yield axios.delete(`/fridge/delete/${action.payload.id}`);
         //after the delete, initialize another GET request to update the DOM
-        yield put('GET_FRIDGE');
+        yield put({type:'GET_FRIDGE'});
     } catch(error){
         console.log('problem deleting deleteSaga.js', error);
     }

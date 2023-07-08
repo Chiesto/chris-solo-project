@@ -82,25 +82,31 @@ Grid
 #description{
   width: 450px;
   margin-right: 0px;
-  background-color: lightgray;
+  margin-left: 10%;
+  padding: 10px;
+  background-color: white;
+  border: 3px outset rgba(128, 128, 128, 0.38);
 }
 #landingPic{
   width: 300px;
 }
-.landingContainer{
+/* .landingContainer{
   background-color: black;
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa2ldt9G7jiCM_Rs0ESiWIpdptGVPk5E7_Lg&usqp=CAU);
   
-}
-#description{
-  margin-left: 10%;
-  padding: 10px;
-  background-color: white;
-}
+} */
+
 #heading{
   width: 110px;
   padding: 10px;
   margin-left: 18%;
   background-color: white;
+  border: 3px outset rgba(128, 128, 128, 0.38);
+}
+.switch{
+  background-color: white;
+  width: 200px;
+  padding-bottom: 10px;
+  border: 3px outset rgba(128, 128, 128, 0.38);
 }
 
