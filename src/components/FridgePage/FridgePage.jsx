@@ -81,9 +81,11 @@ function UserPage() {
         </table>
         <p id='fridgeText'>*Click on an ingredient to edit its details*</p>
       </div>
-      <button className='fridgeBtn' onClick={()=>history.push('/add')}>Add to your fridge</button><br/><br/><br/><br/>
-      <button className='fridgeBtn' onClick={()=>history.push('/recipes')}>Find Recipes</button>
-
+      <div id='fridgePageBtns'>
+        {fridge.length<1&& <p>*start here*</p>}
+        <button className='fridgeBtn' onClick={()=>history.push('/add')}>Add to your fridge</button><br/><br/><br/><br/>
+        <button className='fridgeBtn' onClick={()=>history.push('/recipes')}>Find Recipes</button>
+      </div>
     </div>
   );
 }

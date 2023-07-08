@@ -26,13 +26,14 @@ function LandingPage() {
         <div className="grid-col grid-col_8">
           <p id='description'>
            
-            Planning for meals and grocery shopping is hard work. Pantry Pal helps you out by organizing the food in your fridge and showing you what recipes can be made with your ingredients! 
-            Users are able to add to and maintain a ‘fridge’ of their ingredients. When they decide they want to make something, they can simply do a search and the app will show 
-            them a list of recipes that can be made with the ingredients contained in their fridge. Users will have to register for an account if they wish to use this app. 
+            Planning for meals can be hard work. Especially when you get to the end of your groceries and your options become limited. Pantry Pal helps you out by organizing the 
+            food in your fridge and showing you what recipes can be made with your left over ingredients! <br/>
+            You are able to add to and maintain a ‘fridge’ of your ingredients. When you decide you want to make something, you can simply do a search and the app will show 
+            you a list of recipes that can be made with the ingredients contained in your fridge. Stop wasting your left over groceries and sign up today!
           </p>
          
           
-
+          
         </div>
 
         <div className="grid-col grid-col_3">

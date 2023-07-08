@@ -40,8 +40,17 @@
     color: black;
     background-color: white;
     border-radius: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
 #bckToFridge{
     margin-top: 5%;
+}
+#findRecipesDiv p {
+    margin-left: 10%;
+}
+#findRecipesDiv h1 {
+    margin-left: 10%;
+    font-weight:100;
 }

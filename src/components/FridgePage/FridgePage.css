@@ -22,12 +22,16 @@
 }
 .tableContainer{
     float:left;
-    width: 70%;
+    width: 63%;
+    background-color: rgba(240, 248, 255, 0.737);
+    padding-top: 30px;
+    margin-left: 30px;
+    border-radius: 20px;
 }
 .fridgeBtn{
     float: right;
     margin-left: 0;
-    margin-right: 10%;
+    /* margin-right: 10%; */
     height: 70px;
     width: 130px;
     font-size: 20px;
@@ -38,6 +42,21 @@
 .fridgeBtn:hover{
     background-color: blue;
 }
+
+#fridgePageBtns{
+    background-color: rgba(240, 248, 255, 0.737);
+    width: fit-content;
+    float: right;
+    padding: 20px;
+    margin-right: 5%;
+    border-radius: 20px;
+}
+
+#fridgePageBtns p{
+    margin: 0;
+    margin-left: 15%;
+}
+
 #protein{
     background-color: lightyellow;
 }
@@ -74,7 +93,7 @@
     background-color: aliceblue;
 }
 .otherTd:hover{
-    background-color: rgba(240, 248, 255, 0);
+    background-color: grey;
 }
 #fridgeText{
     margin: 0;

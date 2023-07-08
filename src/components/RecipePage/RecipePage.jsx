@@ -22,7 +22,7 @@ function RecipePage(){
     }, []);
     
     return(
-        <>
+        <div id="findRecipesDiv">
         <h1>Find Recipes</h1>
         <p>Available recipes with your ingredients:</p>
         <div id="scroll">
@@ -33,7 +33,7 @@ function RecipePage(){
             
         </div>
         <button className='back_to_fridge' id='bckToFridge' onClick={()=>history.push('/fridge')}>Back to your fridge</button>
-        </>
+        </div>
     )
 }
 

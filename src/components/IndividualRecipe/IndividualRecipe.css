@@ -1,6 +1,6 @@
 #individualRecipeContainer{
     width: 80%;
-    height: 600px;
+    height: 548px;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 20px;
@@ -9,6 +9,7 @@
     display: flex;
     flex-wrap: wrap;
     overflow: auto;
+    border-radius: 10px;
     /* justify-content: space-between; */
 }
 #ingredientsDiv{
