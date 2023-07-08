@@ -24,13 +24,26 @@ function EditPage(){
     const [foodGroup, setFoodGroup] = useState(item?.food_group_id);
     const [amount, setAmount] = useState(item?.amount);
     const [expiration, setExpiration] = useState(rearrangedExp);
+    const [showModal, setShowModal] = useState(false);
 
     
   //delete and update functions
     const deleteIngredient = ()=>{
+      setShowModal(true);
+      
+    }
+
+    const handleConfirmDelete = () =>{
       dispatch({type: 'DELETE_ITEM', payload:itemID});
       history.push('/fridge');
     }
+    const handleCancelDelete = () =>{
+      setShowModal(false);
+    }
+
+
+
+
     //allows the user to update any or all of the item categories
     const updateIngredient = (event)=>{
       event.preventDefault();
@@ -49,7 +62,7 @@ function EditPage(){
     useEffect(()=>{
       dispatch({type: 'GET_FRIDGE'});
     }, []);
-
+console.log(showModal);
     return(
     <div className="addPageContainer">
       <div id="editPageFormDiv">
@@ -80,12 +93,22 @@ function EditPage(){
             <label htmlFor='expiration'>Expiration:</label>
             <input required onChange={(event)=>setExpiration(event.target.value)} value={expiration} name='expiration' type="date" />
             <button className="editPageBtn" type='submit'>Accept Changes</button> <br/><br/>
-            <button className="editPageBtn" onClick={deleteIngredient}>Delete Ingredient</button>
+            <button type='button'className="editPageBtn" onClick={deleteIngredient}>Delete Ingredient</button>
             
           </form>
           
+          
         </div>
       </div>
+      {showModal&&(
+        <div className="modal">
+          <div className="modal_content">
+            <h3>Are you sure you want to delete {item.ingredient_name}?</h3>
+            <button className='modalBtn' type='button' onClick={handleConfirmDelete}>Yes delete</button>
+            <button className='modalBtn' type='button' onClick={handleCancelDelete}>No thanks</button>
+          </div>
+        </div>
+        )}
       <button className='back_to_fridge' id="editBkToFridge" type='button' onClick={()=>history.push('/fridge')}>Back to your fridge</button>
 
     </div>
