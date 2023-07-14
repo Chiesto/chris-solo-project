@@ -17,3 +17,6 @@ CREATE TABLE "food_group" (
 	"id" SERIAL PRIMARY KEY,
 	"group_name" VARCHAR
 );
+
+INSERT INTO "food_group" (group_name)
+VALUES ('protien'), ('vegitable'), ('grain'), ('fruit'), ('dairy'), ('other');
